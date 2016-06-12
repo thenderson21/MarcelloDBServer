@@ -1,0 +1,6 @@
+/Users/toddhenderson/Projects/Xamarin/MarcelloDB/MarcelloDB.Tests/obj/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/Users/toddhenderson/Projects/Xamarin/MarcelloDB/MarcelloDB.Tests/bin/Debug/MarcelloDB.Tests.dll.mdb
+/Users/toddhenderson/Projects/Xamarin/MarcelloDB/MarcelloDB.Tests/bin/Debug/MarcelloDB.Tests.dll
+/Users/toddhenderson/Projects/Xamarin/MarcelloDB/MarcelloDB.Tests/obj/Debug/MarcelloDB.Tests.dll
+/Users/toddhenderson/Projects/Xamarin/MarcelloDB/MarcelloDB.Tests/obj/Debug/MarcelloDB.Tests.dll.mdb
+/Users/toddhenderson/Projects/Xamarin/MarcelloDB/MarcelloDB.Tests/bin/Debug/nunit.framework.dll

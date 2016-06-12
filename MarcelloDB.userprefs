@@ -1,0 +1,4 @@
+﻿<Properties StartupItem="MarcelloDB.Tests/MarcelloDB.Tests.csproj">
+  <MonoDevelop.Ide.ItemProperties.MarcelloDB.Tests PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.ItemProperties.MarcelloDB.Server PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>

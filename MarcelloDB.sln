@@ -1,0 +1,29 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarcelloDB.Server", "MarcelloDB.Server\MarcelloDB.Server.csproj", "{CB938714-EE5B-4DD4-929C-6A0B50A0AB99}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarcelloDB.Tests", "MarcelloDB.Tests\MarcelloDB.Tests.csproj", "{82887739-2299-46CE-8832-6B31C9C99E47}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarcelloDB.Client", "MarcelloDB.Client\MarcelloDB.Client.csproj", "{A1ED2FC2-C8D1-43B4-9896-89241B8FB870}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CB938714-EE5B-4DD4-929C-6A0B50A0AB99}.Debug|x86.ActiveCfg = Debug|x86
+		{CB938714-EE5B-4DD4-929C-6A0B50A0AB99}.Debug|x86.Build.0 = Debug|x86
+		{CB938714-EE5B-4DD4-929C-6A0B50A0AB99}.Release|x86.ActiveCfg = Release|x86
+		{CB938714-EE5B-4DD4-929C-6A0B50A0AB99}.Release|x86.Build.0 = Release|x86
+		{82887739-2299-46CE-8832-6B31C9C99E47}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{82887739-2299-46CE-8832-6B31C9C99E47}.Debug|x86.Build.0 = Debug|Any CPU
+		{82887739-2299-46CE-8832-6B31C9C99E47}.Release|x86.ActiveCfg = Release|Any CPU
+		{82887739-2299-46CE-8832-6B31C9C99E47}.Release|x86.Build.0 = Release|Any CPU
+		{A1ED2FC2-C8D1-43B4-9896-89241B8FB870}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A1ED2FC2-C8D1-43B4-9896-89241B8FB870}.Debug|x86.Build.0 = Debug|Any CPU
+		{A1ED2FC2-C8D1-43B4-9896-89241B8FB870}.Release|x86.ActiveCfg = Release|Any CPU
+		{A1ED2FC2-C8D1-43B4-9896-89241B8FB870}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
