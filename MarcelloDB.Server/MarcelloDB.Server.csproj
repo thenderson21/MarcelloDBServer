@@ -36,11 +36,11 @@
     <Reference Include="MarcelloDB.netfx">
       <HintPath>..\packages\MarcelloDB.0.4.0\lib\net45\MarcelloDB.netfx.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="CommandLine">
       <HintPath>..\packages\CommandLineParser.1.9.71\lib\net45\CommandLine.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -52,6 +52,9 @@
     <Compile Include="Constants\Info.cs" />
     <Compile Include="Options.cs" />
     <Compile Include="Constants\DefaultOptions.cs" />
+    <Compile Include="Models\_User.cs" />
+    <Compile Include="Data\_UsersCollection.cs" />
+    <Compile Include="Data\DataCollectionChangedEventArgs.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -60,6 +63,7 @@
     <Folder Include="Data\" />
     <Folder Include="Constants\" />
     <Folder Include="Helpers\" />
+    <Folder Include="Models\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
