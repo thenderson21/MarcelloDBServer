@@ -5,20 +5,21 @@ namespace MarcelloDB.Server
 {
 	public class Application
 	{
-		public String Method { get; set; } = "http://localhost:8080/";
 
-	 	public Application ()
+		public static Options Options { get; private set; } = new Options ();
+
+		public Application ()
 		{
-			Server ws = new Server (SendResponse, Method);
+			Server ws = new Server (Options.Prefixes, SendResponse);
 			ws.Run ();
-			Console.WriteLine ("A simple webserver. Press a key to quit.");
+			Console.WriteLine ($"{Constants.Info.Name}. Press a key to quit.");
 			Console.ReadKey ();
 			ws.Stop ();
 		}
 
-		public Application (string method) : this()
+		public Application (Options options) : this ()
 		{
-			Method = method;
+			Options = options;
 		}
 
 		string SendResponse (HttpListenerRequest request)

@@ -7,6 +7,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarcelloDB.Tests", "Marcell
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarcelloDB.Client", "MarcelloDB.Client\MarcelloDB.Client.csproj", "{A1ED2FC2-C8D1-43B4-9896-89241B8FB870}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{85BB55B4-1711-448A-B1E4-FCF42F14432B}"
+	ProjectSection(SolutionItems) = preProject
+		MarcelloDB = MarcelloDB
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -25,5 +30,11 @@ Global
 		{A1ED2FC2-C8D1-43B4-9896-89241B8FB870}.Debug|x86.Build.0 = Debug|Any CPU
 		{A1ED2FC2-C8D1-43B4-9896-89241B8FB870}.Release|x86.ActiveCfg = Release|Any CPU
 		{A1ED2FC2-C8D1-43B4-9896-89241B8FB870}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		Policies = $0
+		$0.DotNetNamingPolicy = $1
+		$1.DirectoryNamespaceAssociation = PrefixedHierarchical
+		$1.ResourceNamePolicy = FileFormatDefault
 	EndGlobalSection
 EndGlobal

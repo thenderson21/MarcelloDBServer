@@ -13,7 +13,7 @@ namespace MarcelloDB.Server
 		public Server (string [] prefixes, Func<HttpListenerRequest, string> method)
 		{
 			if (!HttpListener.IsSupported)
-				throw new NotSupportedException ( "Sytem does not support HttpListener.");
+				throw new NotSupportedException ("Sytem does not support HttpListener.");
 
 			// URI prefixes are required, for example 
 			// "http://localhost:8080/index/".
@@ -37,7 +37,7 @@ namespace MarcelloDB.Server
 		public void Run ()
 		{
 			ThreadPool.QueueUserWorkItem ((o) => {
-				Console.WriteLine ("MarcelloDB Server running...");
+				Console.WriteLine ($"{Constants.Info.Name} {Constants.Info.Version.Short} running...");
 				try {
 					while (_listener.IsListening) {
 						ThreadPool.QueueUserWorkItem ((c) => {
