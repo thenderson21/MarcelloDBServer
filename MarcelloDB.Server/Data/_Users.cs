@@ -1,27 +1,31 @@
 ﻿using System;
 using System.Collections.Generic;
-using MarcelloDB.Server.Models
+using System.Linq;
+using MarcelloDB.Collections;
+using MarcelloDB.Server.Models;
+
 namespace MarcelloDB.Server.Data
 {
-	public class _UsersCollection : Database<_User>
+	internal class _Users : Base<_User>
 	{
+
 		Collection<_User, string> _Collection {
 			get {
-				return InitalizeCollection<_User, string> (p => p._UserId);
+				return InitalizeCollection<_User, string> (p => p.Username);
 			}
 		}
 
 		#region Singleton Constructor/Initilizer
 
-		_UsersCollection ()
+		_Users ()
 		{
-			//collection = InitalizeCollection<_User, string> (p => p._UserId);
+			Upsert (new _User { Username = "Admin", Password = "Admin", AdminPrivledges = new List<Privledge> { Privledge.Create, Privledge.Read, Privledge.Update, Privledge.Delete } });
 		}
 
-		static readonly Lazy<_UsersCollection> lazy =
-		new Lazy<_UsersCollection> (() => new _UsersCollection ());
+		static readonly Lazy<_Users> lazy =
+		new Lazy<_Users> (() => new _Users ());
 
-		public static _UsersCollection Instance { get { return lazy.Value; } }
+		public static _Users Instance { get { return lazy.Value; } }
 
 		#endregion
 
@@ -33,14 +37,10 @@ namespace MarcelloDB.Server.Data
 		/// <value>All.</value>
 		public override List<_User> All {
 			get {
-				return (_Collection.All as IEnumerable<_User>).OrderBy (o => o.Name).ToList ();
+				return (_Collection.All as IEnumerable<_User>).ToList ();
 			}
 		}
 
-		/// <summary>
-		/// Occurs when the collection changes.
-		/// </summary>
-		public override event EventHandler<DataCollectionChangedEventArgs<_User>> CollectionChanged = delegate { };
 
 		/// <summary>
 		/// Insert or Update the specified contact into the collection.
@@ -49,7 +49,6 @@ namespace MarcelloDB.Server.Data
 		public override void Upsert (_User item)
 		{
 			_Collection.Persist (item);
-			CollectionChanged (this, new DataCollectionChangedEventArgs<_User> (DataCollectionChangedEventArgsActions.Upsert, item));
 		}
 
 		/// <summary>
@@ -67,11 +66,7 @@ namespace MarcelloDB.Server.Data
 		/// <param name="id">_User identifier.</param>
 		public override void Delete (string id)
 		{
-			var item = _Collection.Find (id);
-
 			_Collection.Destroy (id);
-			CollectionChanged (this, new DataCollectionChangedEventArgs<_User> (DataCollectionChangedEventArgsActions.Upsert, item));
-
 		}
 
 
@@ -82,7 +77,7 @@ namespace MarcelloDB.Server.Data
 		{
 			var items = _Collection.All;
 			foreach (var item in items) {
-				_Collection.Destroy (item._UserId);
+				_Collection.Destroy (item.Username);
 			}
 		}
 

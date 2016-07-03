@@ -48,22 +48,32 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Server.cs" />
     <Compile Include="Application.cs" />
-    <Compile Include="Data\DataBase.cs" />
     <Compile Include="Constants\Info.cs" />
     <Compile Include="Options.cs" />
     <Compile Include="Constants\DefaultOptions.cs" />
     <Compile Include="Models\_User.cs" />
-    <Compile Include="Data\_UsersCollection.cs" />
-    <Compile Include="Data\DataCollectionChangedEventArgs.cs" />
+    <Compile Include="Databases\Database.cs" />
+    <Compile Include="Helpers\ObjectExtension.cs" />
+    <Compile Include="Constants\StorageCollection.cs" />
+    <Compile Include="Databases\DatabaseCollection.cs" />
+    <Compile Include="Privledge.cs" />
+    <Compile Include="Data\_Users.cs" />
+    <Compile Include="Data\Base.cs" />
+    <Compile Include="Models\ResponseError.cs" />
+    <Compile Include="Models\BaseModel.cs" />
+    <Compile Include="Models\Credentials.cs" />
+    <Compile Include="Models\RequestBody.cs" />
+    <Compile Include="Models\ResponseBody.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Data\" />
+    <Folder Include="Databases\" />
     <Folder Include="Constants\" />
     <Folder Include="Helpers\" />
     <Folder Include="Models\" />
+    <Folder Include="Data\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

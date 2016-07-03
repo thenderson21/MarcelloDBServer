@@ -1,19 +1,25 @@
 ﻿<Properties StartupConfiguration="{CB938714-EE5B-4DD4-929C-6A0B50A0AB99}|Default" NuGet.AddPackagesDialog.IncludePrerelease="True">
   <MonoDevelop.Ide.Workbench ActiveDocument="MarcelloDBServer Status">
     <Files>
-      <File FileName="MarcelloDB.Server/Application.cs" Line="13" Column="1" />
-      <File FileName="MarcelloDB.Server/Data/DataBase.cs" Line="33" Column="79" />
-      <File FileName="MarcelloDB.Server/Server.cs" Line="40" Column="47" />
-      <File FileName="MarcelloDB.Server/packages.config" Line="1" Column="1" />
-      <File FileName="MarcelloDB.Server/Options.cs" Line="3" Column="19" />
-      <File FileName="MarcelloDB.Server/Constants/Info.cs" Line="13" Column="4" />
-      <File FileName="MarcelloDB.Server/Models/_User.cs" Line="37" Column="9" />
-      <File FileName="MarcelloDB.Server/Data/_UsersCollection.cs" Line="6" Column="38" />
-      <File FileName="MarcelloDB.Server/Data/DataCollectionChangedEventArgs.cs" Line="44" Column="2" />
+      <File FileName="MarcelloDB.Server/Server.cs" Line="174" Column="13" />
+      <File FileName="MarcelloDB.Server/Application.cs" Line="13" Column="44" />
+      <File FileName="MarcelloDB.Server/Models/ResponseError.cs" Line="6" Column="23" />
+      <File FileName="MarcelloDB.Server/Helpers/ObjectExtension.cs" Line="14" Column="12" />
+      <File FileName="MarcelloDB.Server/Models/BaseModel.cs" Line="14" Column="4" />
+      <File FileName="MarcelloDB.Server/Models/_User.cs" Line="33" Column="7" />
+      <File FileName="MarcelloDB.Server/Databases/Database.cs" Line="10" Column="8" />
+      <File FileName="MarcelloDB.Server/Databases/DatabaseCollection.cs" Line="4" Column="38" />
+      <File FileName="MarcelloDB.Server/Options.cs" Line="27" Column="4" />
+      <File FileName="MarcelloDB.Server/Data/_Users.cs" Line="20" Column="9" />
+      <File FileName="MarcelloDB.Server/Models/Credentials.cs" Line="20" Column="18" />
+      <File FileName="MarcelloDB.Server/Models/RequestBody.cs" Line="20" Column="3" />
+      <File FileName="MarcelloDB.Server/Models/ResponseBody.cs" Line="6" Column="39" />
+      <File FileName="MarcelloDB.Server/Data/Base.cs" Line="74" Column="14" />
+      <File FileName="TODO.md" Line="15" Column="40" />
       <File FileName="MarcelloDBServer Status" />
     </Files>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release|x86" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="/Users/toddhenderson/Projects/Xamarin/MarcelloDBServer/MarcelloDB.Server/Application.cs" line="13" column="38" />

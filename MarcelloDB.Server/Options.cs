@@ -19,7 +19,7 @@ namespace MarcelloDB.Server
 		public string [] Ports { get; set; } = new string [] { "4040" };
 
 		[Option ('u', "unsecure", HelpText = "Use and unsecure connection. **Should NOT be used in producton environment**")]
-		public bool Unsecure { get; set; }
+		public bool Unsecure { get; set; } = true;
 
 
 		[HelpOption]

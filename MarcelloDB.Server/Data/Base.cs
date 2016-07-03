@@ -1,43 +1,28 @@
 ﻿using System;
-using System.IO;
 using System.Collections.Generic;
-
-using MarcelloDB;
+using System.IO;
 using MarcelloDB.Collections;
-using MarcelloDB.Platform;
+using Newtonsoft.Json;
 
 namespace MarcelloDB.Server.Data
 {
-
-	public abstract class Database
+	public abstract class Base
 	{
+		protected static netfx.Platform _platform = new netfx.Platform ();
 
-		static readonly Lazy<Session> _AdminSessionlazy = new Lazy<Session> (() => {
+		static readonly Lazy<Session> _Sessionlazy = new Lazy<MarcelloDB.Session> (() => {
 			var path = Path.Combine (Constants.DefaultOptions.DatabaseBaseDir, "_internal");
 			Directory.CreateDirectory (path);
 
 			return new Session (_platform, path);
 		});
 
-		static readonly Lazy<Session> _CollectionsSessionlazy = new Lazy<Session> (() => {
-			var path = Constants.DefaultOptions.DatabaseBaseDir;
-			Directory.CreateDirectory (path);
+		protected Session _session { get { return _Sessionlazy.Value; } }
 
-			return new Session (_platform, path);
-		});
-
-		protected static netfx.Platform _platform = new netfx.Platform ();
-
-		protected Session _adminSession { get { return _AdminSessionlazy.Value; } }
-
-		protected Session _collectionsSession { get { return _CollectionsSessionlazy.Value; } }
-
-		protected static object _adminLock = new Object ();
-
-		protected static object _collectionsLock = new Object ();
+		protected static object _Lock = new Object ();
 	}
 
-	public abstract class Database<ITEMTYPE> : Database
+	public abstract class Base<ITEMTYPE> : Base
 	{
 
 		protected String _collectionName {
@@ -56,14 +41,6 @@ namespace MarcelloDB.Server.Data
 
 		#endregion
 
-		#region Abstract Events
-
-		/// <summary>
-		/// Occurs when the collection changes.
-		/// </summary>
-		public abstract event EventHandler<DataCollectionChangedEventArgs<ITEMTYPE>> CollectionChanged;
-
-		#endregion
 
 		#region Abstract Methods
 		/// <summary>
@@ -92,15 +69,18 @@ namespace MarcelloDB.Server.Data
 
 		#endregion
 
+		public string ToJSON ()
+		{
+			return JsonConvert.SerializeObject (this.All);
+		}
+
 		protected Collection<T, TID> InitalizeCollection<T, TID> (Func<T, TID> idFunct)
 		{
-			lock (_adminLock) {
-				return _adminSession [$"{_collectionName}.data"].Collection<T, TID> (_collectionName, idFunct);
+			lock (_Lock) {
+				return _session [$"{_collectionName}.data"].Collection<T, TID> (_collectionName, idFunct);
 			}
 		}
 	}
 }
-
-
 
 

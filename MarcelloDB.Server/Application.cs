@@ -10,7 +10,7 @@ namespace MarcelloDB.Server
 
 		public Application ()
 		{
-			Server ws = new Server (Options.Prefixes, SendResponse);
+			Server ws = new Server (Options.Prefixes);
 			ws.Run ();
 			Console.WriteLine ($"{Constants.Info.Name}. Press a key to quit.");
 			Console.ReadKey ();
@@ -22,10 +22,6 @@ namespace MarcelloDB.Server
 			Options = options;
 		}
 
-		string SendResponse (HttpListenerRequest request)
-		{
-			return $"<HTML><BODY>My web page.<br>{DateTime.Now}</BODY></HTML>";
-		}
 	}
 }
 

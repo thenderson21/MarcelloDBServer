@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace MarcelloDB.Server.Models
 {
-	internal class _User
+	internal class _User : BaseModel
 	{
 		/// <summary>
 		/// Gets or sets the username.
@@ -24,21 +24,16 @@ namespace MarcelloDB.Server.Models
 		public DateTime LastLoggedIn { get; set; }
 
 		/// <summary>
-		/// User.
+		/// Gets or sets the admin privledges.
 		/// </summary>
-		public Dictionary<string, List<CollectionPrivledges>> Collections { get; set; }
+		/// <value>The admin privledges.</value>
+		public List<Privledge> AdminPrivledges { get; set; }
 
 		/// <summary>
-		/// Collection privledges.
+		/// Gets or sets the content privledges.
 		/// </summary>
-		public enum CollectionPrivledges
-		{
-			Create,
-			Read,
-			Update,
-			Delete,
-			All
-		}
+		/// <value>The content privledges.</value>
+		public List<Privledge> ContentPrivledges { get; set; }
 	}
 }
 

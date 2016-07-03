@@ -10,6 +10,11 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{85BB55B4-1711-448A-B1E4-FCF42F14432B}"
 	ProjectSection(SolutionItems) = preProject
 		MarcelloDB = MarcelloDB
+		rules.make = rules.make
+		configure = configure
+		Makefile = Makefile
+		README.md = README.md
+		TODO.md = TODO.md
 	EndProjectSection
 EndProject
 Global
